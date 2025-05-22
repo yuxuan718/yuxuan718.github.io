@@ -44,23 +44,34 @@
       padding: 20px 0;
     }
     .card {
-      width: 90%;
-      max-width: 700px;
+      width: 95%;
+      max-width: 600px;
       background-color: #fff;
       color: #000;
       border-radius: 16px;
       padding: 20px;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 20px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
     .app-icon {
       flex: 0 0 100px;
+      text-align: center;
     }
     .app-icon img {
       width: 100%;
       border-radius: 16px;
+    }
+    .app-icon-links {
+      margin-top: 10px;
+      font-size: 0.85em;
+    }
+    .app-icon-links a {
+      display: block;
+      color: #0070c9;
+      text-decoration: none;
+      margin: 2px 0;
     }
     .details {
       flex: 1;
@@ -86,16 +97,12 @@
       gap: 12px;
       flex-wrap: wrap;
     }
-    .store-buttons img {
-      height: 38px;
+    .store-buttons a {
+      flex: 1 1 45%;
     }
-    .footer-text {
-      text-align: center;
-      padding: 20px 20px 10px;
-      color: #aaa;
-      font-size: 0.9em;
-      max-width: 680px;
-      margin: auto;
+    .store-buttons img {
+      width: 100%;
+      height: auto;
     }
     .footer-bar {
       text-align: center;
@@ -138,7 +145,11 @@
     <div class="content">
       <div class="card">
         <div class="app-icon">
-          <img src="Black-Curved-icon-mdpi.png" alt="App Icon">
+          <img src="/wp-content/uploads/2025/05/4310ab1c-dfc7-43cc-b4a4-7037d5e337a7.png" alt="App Icon">
+          <div class="app-icon-links">
+            <a href="/privacy.html">Privacy</a>
+            <a href="/terms.html">Terms</a>
+          </div>
         </div>
         <div class="details">
           <h2>ConverterGo</h2>
@@ -158,10 +169,6 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="footer-text">
-      At Appzilla Labs, we create innovative mobile apps that meet your needs, from concept to launch. Let us bring your ideas to life with expert development and design.
     </div>
 
     <div class="footer-bar">
