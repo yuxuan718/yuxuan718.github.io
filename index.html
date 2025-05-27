@@ -1,210 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Appzilla Labs</title>
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      background-color: #000;
-      color: white;
+      background: #000;
+      color: #fff;
       font-family: Arial, sans-serif;
-      height: 100%;
-    }
-    .wrapper {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    .header {
-      text-align: center;
-      padding: 40px 0 10px;
-    }
-    .header h1 {
-      font-size: 4em;
-      margin: 0;
-      letter-spacing: 1px;
-    }
-    .cta-button {
-      display: inline-block;
-      background-color: red;
-      color: white;
-      padding: 12px 24px;
-      margin-top: 10px;
-      margin-bottom: 20px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1em;
-      border-radius: 6px;
-    }
-    .content {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding-bottom: 20px;
     }
     .card {
-      width: 95%;
-      max-width: 600px;
-      background-color: #fff;
+      background: #fff;
       color: #000;
-      border-radius: 16px;
+      max-width: 700px;
+      margin: 40px auto;
       padding: 20px;
+      border-radius: 12px;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    }
-    .card-inner {
-      display: flex;
-      width: 100%;
-      gap: 20px;
       align-items: flex-start;
+      gap: 20px;
     }
     .app-icon {
-      flex: 0 0 100px;
-      text-align: center;
+      width: 100px;
+      height: 100px;
+      border-radius: 20px;
+      object-fit: cover;
     }
-    .app-icon img {
-      width: 100%;
-      border-radius: 16px;
-    }
-    .app-icon-links {
-      margin-top: 8px;
-      font-size: 0.85em;
+    .icon-links {
       display: flex;
-      justify-content: center;
-      gap: 10px;
+      gap: 12px;
+      margin-top: 8px;
     }
-    .app-icon-links a {
+    .icon-links a {
       color: #0070c9;
       text-decoration: none;
+      font-size: 0.9em;
     }
-    .details {
+    .app-details {
       flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
-    .details h2 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 1.5em;
-      text-align: center;
+    .app-details h2 {
+      margin: 0 0 12px;
     }
     .features {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 24px;
       margin-bottom: 20px;
-      font-size: 0.95em;
-      color: #333;
-    }
-    .features-row {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-    }
-    .features-row div {
-      width: 48%;
     }
     .store-buttons {
       display: flex;
       gap: 20px;
-      justify-content: center;
-      width: 100%;
     }
     .store-buttons a {
-      flex: 1 1 45%;
+      display: block;
+      flex: 1;
+      text-align: center;
     }
     .store-buttons img {
       width: 100%;
-      height: 50px;
-      object-fit: contain;
-    }
-    .footer-bar {
-      text-align: center;
-      padding: 15px;
-      color: #999;
-      font-size: 0.85em;
-      border-top: 1px solid #333;
-      background-color: #000;
-      margin-top: auto;
-    }
-    .footer-bar a {
-      color: #ccc;
-      text-decoration: none;
-    }
-
-    @media (max-width: 768px) {
-      .card-inner {
-        flex-direction: column;
-        align-items: center;
-      }
-      .app-icon {
-        margin-bottom: 15px;
-      }
-      .app-icon-links {
-        justify-content: center;
-      }
-      .features-row {
-        flex-direction: column;
-        align-items: center;
-      }
-      .features-row div {
-        width: 100%;
-        text-align: center;
-      }
-      .header h1 {
-        font-size: 2.5em;
-      }
+      height: auto;
+      max-width: 220px;
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="header">
-      <h1>APPZILLA LABS</h1>
-      <a href="#" class="cta-button">CHECK OUT OUR APPS</a>
-    </div>
+  <!-- ... header and “Check Out Our Apps” button above ... -->
 
-    <div class="content">
-      <div class="card">
-        <div class="card-inner">
-          <div class="app-icon">
-            <img src="Black-Curved-icon-mdpi.png" alt="App Icon">
-            <div class="app-icon-links">
-              <a href="/ConverterGo/privacy.html">Privacy</a>
-              <a href="/ConverterGo/terms.html">Terms</a>
-            </div>
-          </div>
-          <div class="details">
-            <h2>ConverterGo</h2>
-            <div class="features">
-              <div class="features-row">
-                <div>✔ 170+ Currencies</div>
-                <div>✔ Multiple Unit Types</div>
-              </div>
-              <div class="features-row">
-                <div>✔ Offline Mode</div>
-                <div>✔ Dark Mode</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="store-buttons">
-          <a href="https://apps.apple.com" target="_blank">
-            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
-          </a>
-          <a href="https://play.google.com/store" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
-          </a>
-        </div>
+  <div class="card">
+    <div>
+      <img src="Black-Curved-icon-mdpi.png" alt="App Icon" class="app-icon">
+      <div class="icon-links">
+        <a href="convertergo/privacy.html">Privacy</a>
+        <a href="convertergo/terms.html">Terms</a>
       </div>
     </div>
+    <div class="app-details">
+      <h2>ConverterGo</h2>
+      <div class="features">
+        <div>✔ 170+ Currencies<br>✔ Offline Mode</div>
+        <div>✔ Multiple Unit Types<br>✔ Dark Mode</div>
+      </div>
+      <div class="store-buttons">
+        <a href="#"><img src="appstorebutton.png" alt="Download on the App Store"></a>
+        <a href="#"><img src="googleplaybutton.png" alt="Get it on Google Play"></a>
+      </div>
+    </div>
+    <!-- ... Footer below ... -->
 
     <div class="footer-bar">
       &copy; 2025 Appzilla Labs. All rights reserved. | Contact: <a href="mailto:appzillalabs@gmail.com">appzillalabs@gmail.com</a>
