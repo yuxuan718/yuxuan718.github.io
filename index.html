@@ -1,95 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Appzilla Labs</title>
   <style>
-    body {
+    html, body {
       margin: 0;
-      background: #000;
-      color: #fff;
+      padding: 0;
+      background-color: #000;
+      color: white;
       font-family: Arial, sans-serif;
+      height: 100%;
+    }
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .header {
+      text-align: center;
+      padding: 20px 0;
+    }
+    .header h1 {
+      font-size: 4em;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+    .cta-button {
+      background-color: red;
+      color: white;
+      padding: 12px 24px;
+      margin: 16px auto;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+    .content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
     }
     .card {
-      background: #fff;
+      width: 90%;
+      max-width: 800px;
+      background-color: #fff;
       color: #000;
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 20px;
-      border-radius: 12px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .card-inner {
       display: flex;
+      gap: 24px;
+      padding: 24px;
       align-items: flex-start;
-      gap: 20px;
     }
     .app-icon {
-      width: 100px;
-      height: 100px;
-      border-radius: 20px;
-      object-fit: cover;
+      flex: 0 0 100px;
+      text-align: center;
     }
-    .icon-links {
+    .app-icon img {
+      width: 100%;
+      border-radius: 16px;
+    }
+    .app-icon-links {
+      margin-top: 12px;
       display: flex;
-      gap: 12px;
-      margin-top: 8px;
+      justify-content: space-around;
     }
-    .icon-links a {
+    .app-icon-links a {
       color: #0070c9;
       text-decoration: none;
       font-size: 0.9em;
     }
-    .app-details {
+    .details {
       flex: 1;
+      color: #222;
+      text-align: left;
     }
-    .app-details h2 {
-      margin: 0 0 12px;
+    .details h2 {
+      margin: 0 0 16px;
+      font-size: 2em;
+      color: #111;
     }
-    .features {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px 24px;
-      margin-bottom: 20px;
+    .details p {
+      margin: 0 0 16px;
+      line-height: 1.5;
+      color: #333;
     }
     .store-buttons {
       display: flex;
-      gap: 20px;
+      justify-content: center;
+      gap: 24px;
+      padding: 16px 24px 24px;
+      background-color: #fafafa;
     }
     .store-buttons a {
+      flex: 0 0 200px;
       display: block;
-      flex: 1;
-      text-align: center;
     }
     .store-buttons img {
       width: 100%;
       height: auto;
-      max-width: 250px;
+      display: block;
+    }
+    .footer-bar {
+      text-align: center;
+      padding: 12px;
+      color: #999;
+      font-size: 0.85em;
+      border-top: 1px solid #333;
+      background-color: #000;
+      margin-top: auto;
+    }
+    .footer-bar a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    @media (max-width: 768px) {
+      .card-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .details h2 {
+        font-size: 1.75em;
+      }
+      .store-buttons {
+        flex-direction: column;
+      }
+      .store-buttons a {
+        flex: 1 0 auto;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- ... header and “Check Out Our Apps” button above ... -->
-
-  <div class="card">
-    <div>
-      <img src="Black-Curved-icon-mdpi.png" alt="App Icon" class="app-icon">
-      <div class="icon-links">
-        <a href="convertergo/privacy.html">Privacy</a>
-        <a href="convertergo/terms.html">Terms</a>
+  <div class="wrapper">
+    <div class="header">
+      <h1>APPZILLA LABS</h1>
+      <a href="#" class="cta-button">CHECK OUT OUR APPS</a>
+    </div>
+    <div class="content">
+      <div class="card">
+        <div class="card-inner">
+          <div class="app-icon">
+            <img src="Black-Curved-icon-mdpi.png" alt="App Icon">
+            <div class="app-icon-links">
+              <a href="/ConverterGo/privacy.html">Privacy</a>
+              <a href="/ConverterGo/terms.html">Terms</a>
+            </div>
+          </div>
+          <div class="details">
+            <h2>ConverterGo</h2>
+            <p>The All-in-One converter app, ConverterGo provides unit conversions on over 27 categories as well as up-to-date exchange rates for over 170 currencies and multiple unit types! Great for when you travel abroad.</p>
+            <p>Available offline, with dark mode support for comfortable use day or night.</p>
+          </div>
+        </div>
+        <div class="store-buttons">
+          <a href="https://apps.apple.com/us/app/convertergo/id6746034629" target="_blank">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+          </a>
+          <a href="https://play.google.com/store" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
+          </a>
+        </div>
       </div>
     </div>
-    <div class="app-details">
-      <h2>ConverterGo</h2>
-      <div class="features">
-        <div>✔ 170+ Currencies<br>✔ Offline Mode</div>
-        <div>✔ Multiple Unit Types<br>✔ Dark Mode</div>
-      </div>
-      <div class="store-buttons">
-        <a href="#"><img src="appstorebutton.png" alt="Download on the App Store"></a>
-        <a href="#"><img src="googleplaybutton.png" alt="Get it on Google Play"></a>
-      </div>
+    <div class="footer-bar">
+      &copy; 2025 Appzilla Labs. All rights reserved. | Contact: <a href="mailto:appzillalabs@gmail.com">appzillalabs@gmail.com</a>
     </div>
-    <!-- ... Footer below ... -->
-
   </div>
 </body>
 </html>
