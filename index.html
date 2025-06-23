@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Appzilla Labs</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     html, body {
       margin: 0;
       padding: 0;
@@ -38,7 +41,7 @@
       text-decoration: none;
       font-weight: bold;
       border-radius: 6px;
-      margin-bottom: 40px; /* space between button and the card */
+      margin-bottom: 300px; /* space between button and the card */
     }
     .content {
       flex: 1;
@@ -88,7 +91,7 @@
       height: auto;
       display: block;
       margin: 0 auto;
-      padding-top: 24px;
+      padding-top: 50px;
       padding-bottom: 12px; /* space between image and button */
     }
     .details {
@@ -158,10 +161,10 @@
 <body>
     <div class="header">
       <img src="appzillalabs-white.png" alt="Banner" class="banner-image" />
-      <a href="#" class="cta-button">CHECK OUT OUR APPS</a>
+      <a href="#app-card" class="cta-button">CHECK OUT OUR APPS</a>
     </div>
     <div class="content">
-      <div class="card">
+      <div class="card" id="app-card">
         <div class="card-inner">
           <div class="app-icon">
             <img src="Black-Curved-icon-mdpi.png" alt="App Icon">
