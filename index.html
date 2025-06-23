@@ -20,35 +20,37 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      padding-top:80px; /* Added spacing at the top */
+      padding-top: 80px;
     }
     .header {
       text-align: center;
       padding: 0;
       margin: 0;
     }
-    .header h1 {
-      font-size: 4em;
-      margin: 0;
-      letter-spacing: 1px;
-    }
     .cta-button {
       background-color: red;
       color: white;
       padding: 12px 24px;
-      margin: 0 auto;
+      margin: 12px auto 80px;
       display: inline-block;
       text-decoration: none;
       font-weight: bold;
       border-radius: 6px;
-      margin-bottom: 150px; /* space between button and the card */
+    }
+    .banner-image {
+      max-width: 400px;
+      width: 90%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      padding-top: 50px;
     }
     .content {
       flex: 1;
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      padding: 10px 0 20px;
+      padding: 10px 0 40px;
     }
     .card {
       width: 90%;
@@ -58,13 +60,13 @@
       border-radius: 16px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
       overflow: hidden;
-      margin-bottom: 150px;
     }
     .card-inner {
       display: flex;
       gap: 24px;
       padding: 24px;
       align-items: flex-start;
+      flex-wrap: wrap;
     }
     .app-icon {
       flex: 0 0 100px;
@@ -87,16 +89,8 @@
       text-decoration: none;
       font-size: 0.9em;
     }
-    .banner-image {
-      max-width: 600px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      padding-top: 50px;
-      padding-bottom: 12px; /* space between image and button */
-    }
     .details {
-      flex: 1;
+      flex: 1 1 0%;
       color: #222;
       text-align: left;
     }
@@ -116,50 +110,53 @@
       gap: 24px;
       padding: 8px 24px 16px;
       background-color: #fafafa;
+      flex-wrap: wrap;
     }
     .store-buttons a {
       flex: 0 0 200px;
       display: block;
     }
     .store-buttons img {
-      width: 200px;
-      height: 60px;
+      width: 100%;
+      height: auto;
       object-fit: contain;
       display: block;
     }
     .footer-bar {
       text-align: center;
-      padding: 12px;
+      padding: 24px 12px;
       color: #999;
       font-size: 0.85em;
       border-top: 1px solid #333;
       background-color: #000;
-      margin-top: auto;
     }
     .footer-bar a {
       color: #ccc;
       text-decoration: none;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
       .card-inner {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        flex-direction: row;
+        gap: 16px;
+      }
+      .app-icon {
+        flex: 0 0 80px;
       }
       .details h2 {
-        font-size: 1.75em;
+        font-size: 1.5em;
       }
       .store-buttons {
-        flex-direction: column;
-        align-items: center;
+        gap: 16px;
+        padding: 16px;
       }
-      .store-buttons a {
-        flex: 1 0 auto;
+      .cta-button {
+        margin-bottom: 60px;
       }
     }
   </style>
 </head>
 <body>
+  <div class="wrapper">
     <div class="header">
       <img src="appzillalabs-white.png" alt="Banner" class="banner-image" />
       <a href="#apps" class="cta-button">CHECK OUT OUR APPS</a>
